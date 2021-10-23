@@ -88,7 +88,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_meta_tags-->
 <title>Blog: Using wcGeneSummary</title>
 
-<meta property="description" itemprop="description" content="Using wcGeneSummary"/>
+<meta property="description" itemprop="description" content="Using wcGeneSummary to make a wordcloud of RefSeq gene description"/>
 
 
 <!--  https://schema.org/Article -->
@@ -99,20 +99,20 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
 <meta property="og:title" content="Blog: Using wcGeneSummary"/>
 <meta property="og:type" content="article"/>
-<meta property="og:description" content="Using wcGeneSummary"/>
+<meta property="og:description" content="Using wcGeneSummary to make a wordcloud of RefSeq gene description"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:site_name" content="Blog"/>
 
 <!--  https://dev.twitter.com/cards/types/summary -->
 <meta property="twitter:card" content="summary"/>
 <meta property="twitter:title" content="Blog: Using wcGeneSummary"/>
-<meta property="twitter:description" content="Using wcGeneSummary"/>
+<meta property="twitter:description" content="Using wcGeneSummary to make a wordcloud of RefSeq gene description"/>
 
 <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","categories","output"]}},"value":[{"type":"character","attributes":{},"value":["Using wcGeneSummary"]},{"type":"character","attributes":{},"value":["Using wcGeneSummary"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["noriakis"]}]}]},{"type":"character","attributes":{},"value":["2021-10-19"]},{"type":"character","attributes":{},"value":["R","Bioinformatics"]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","categories","output"]}},"value":[{"type":"character","attributes":{},"value":["Using wcGeneSummary"]},{"type":"character","attributes":{},"value":["Using wcGeneSummary to make a wordcloud of RefSeq gene description"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["noriakis"]}]}]},{"type":"character","attributes":{},"value":["2021-10-19"]},{"type":"character","attributes":{},"value":["R","Bioinformatics"]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -2062,7 +2062,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Using wcGeneSummary","description":"Using wcGeneSummary","authors":[{"author":"noriakis","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-10-19T00:00:00.000+00:00","citationText":"noriakis, 2021"}
+{"title":"Using wcGeneSummary","description":"Using wcGeneSummary to make a wordcloud of RefSeq gene description","authors":[{"author":"noriakis","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-10-19T00:00:00.000+00:00","citationText":"noriakis, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2092,7 +2092,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <a href="../../index.html#category:Bioinformatics" class="dt-tag">Bioinformatics</a>
 </div>
 <!--/radix_placeholder_categories-->
-<p><p>Using wcGeneSummary</p></p>
+<p><p>Using wcGeneSummary to make a wordcloud of RefSeq gene description</p></p>
 </div>
 
 <div class="d-byline">
@@ -2103,7 +2103,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="d-article">
 <h1 class="unnumbered" id="using-wcgenesummary">Using wcGeneSummary</h1>
-<p>I was searching for the method to annotate the gene cluster when the enrichment analysis did not return significant results. I found a recent package <code>GeneSummary</code> authored by Dr. Zuguang Gu. Using <code>GeneSummary</code>, <code>wordcloud</code> and <code>tm</code>, one can make wordcloud or correlation network of gene description and plot them.</p>
+<p>I was searching for the method to annotate the gene cluster when the enrichment analysis did not return significant results. I found a recent package <a href="https://github.com/jokergoo/GeneSummary"><code>GeneSummary</code></a> authored by Dr. Zuguang Gu. Using <code>GeneSummary</code>, <code>wordcloud</code> and <code>tm</code>, one can make wordcloud or correlation network of gene description and plot them using <a href="https://github.com/noriakis/wcGeneSummary"><code>wcGeneSummary</code></a>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class="co"># devtools::install_github(&quot;noriakis/wcGeneSummary&quot;)</span>

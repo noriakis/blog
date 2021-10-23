@@ -22,7 +22,7 @@
   {
     "path": "posts/2021-10-19-wcGeneSummary/",
     "title": "Using wcGeneSummary",
-    "description": "Using wcGeneSummary",
+    "description": "Using wcGeneSummary to make a wordcloud of RefSeq gene description",
     "author": [
       {
         "name": "noriakis",
@@ -34,9 +34,9 @@
       "R",
       "Bioinformatics"
     ],
-    "contents": "\nUsing wcGeneSummary\nI was searching for the method to annotate the gene cluster when the enrichment analysis did not return significant results. I found a recent package GeneSummary authored by Dr. Zuguang Gu. Using GeneSummary, wordcloud and tm, one can make wordcloud or correlation network of gene description and plot them.\n\n\n# devtools::install_github(\"noriakis/wcGeneSummary\")\nlibrary(wcGeneSummary)\nlibrary(org.Hs.eg.db)\nerccs <- c(\"ERCC1\",\"ERCC2\",\"ERCC3\",\"ERCC4\",\"ERCC5\",\"ERCC6\",\"ERCC8\")\nentrezID = AnnotationDbi::select(org.Hs.eg.db, keys = erccs, columns = c(\"ENTREZID\"), keytype = \"SYMBOL\")$ENTREZID\ngwc <- wcGeneSummary(entrezID, excludeFreq = 5000, max.words=200, random.order=FALSE,\n                     colors=palettetown::pokepal(150), shape=\"circle\", rot.per=0.4)\ngwc$wc\n\n\n\n\n\n\n\n",
+    "contents": "\nUsing wcGeneSummary\nI was searching for the method to annotate the gene cluster when the enrichment analysis did not return significant results. I found a recent package GeneSummary authored by Dr. Zuguang Gu. Using GeneSummary, wordcloud and tm, one can make wordcloud or correlation network of gene description and plot them using wcGeneSummary.\n\n\n# devtools::install_github(\"noriakis/wcGeneSummary\")\nlibrary(wcGeneSummary)\nlibrary(org.Hs.eg.db)\nerccs <- c(\"ERCC1\",\"ERCC2\",\"ERCC3\",\"ERCC4\",\"ERCC5\",\"ERCC6\",\"ERCC8\")\nentrezID = AnnotationDbi::select(org.Hs.eg.db, keys = erccs, columns = c(\"ENTREZID\"), keytype = \"SYMBOL\")$ENTREZID\ngwc <- wcGeneSummary(entrezID, excludeFreq = 5000, max.words=200, random.order=FALSE,\n                     colors=palettetown::pokepal(150), shape=\"circle\", rot.per=0.4)\ngwc$wc\n\n\n\n\n\n\n\n",
     "preview": "posts/2021-10-19-wcGeneSummary/distill-preview.png",
-    "last_modified": "2021-10-23T13:33:52+09:00",
+    "last_modified": "2021-10-23T14:34:47+09:00",
     "input_file": {}
   },
   {
